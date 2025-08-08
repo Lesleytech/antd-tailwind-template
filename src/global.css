@@ -6,9 +6,16 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    /*Colors*/
+    /*Brand Colors*/
     --color-primary: #1677ff;
-    --color-secondary: #ccc;
+    --color-secondary: #414651;
+    --color-error: #ff4d4f;
+    --color-warning: #faad14;
+    --color-success: #52c41a;
+    --color-background: #FFFFFF;
+    --color-foreground: #181D27;
+    --color-divider: #E5E7EB;
+    --color-layout: #f5f5f5;
 
     /*Fonts*/
     --font-sans: 'Be Vietnam Pro', sans-serif;
@@ -16,7 +23,7 @@
 
 @layer base {
     :root {
-        @apply scheme-light;
+        @apply scheme-light bg-background text-foreground;
     }
 
     * {
@@ -24,6 +31,17 @@
     }
 
     .dark {
+        /*Brand Colors*/
+        --color-primary: #2E90FA;
+        --color-secondary: #A4A7AE;
+        --color-error: #ff4d4f;
+        --color-warning: #d89614;
+        --color-success: #32D583;
+        --color-background: #000000;
+        --color-foreground: #FFFFFF;
+        --color-divider: #303032;
+        --color-layout: #131315;
+
         @apply scheme-dark;
     }
 }
